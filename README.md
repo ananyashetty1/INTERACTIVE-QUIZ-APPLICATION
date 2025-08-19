@@ -27,3 +27,5 @@ Implementing user feedback mechanisms for better interactivity.
 Enhancing the user experience through features like a progress bar and restart option.
 
 Overall, building this quiz application was an excellent opportunity to practice full-stack front-end development. It enhanced my ability to design interactive web applications, strengthened my logical thinking for handling user input, and improved my coding efficiency in JavaScript. The successful completion of this task also prepared me for larger projects where real-time user interaction and instant feedback are essential.
+#OUTPUT 
+<img width="768" height="498" alt="Image" src="https://github.com/user-attachments/assets/6ab1eff5-798f-47f8-ab49-921d78b32fc8" />
