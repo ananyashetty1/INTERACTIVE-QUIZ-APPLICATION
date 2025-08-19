@@ -1,0 +1,79 @@
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0f172a; /* slate-900 */
+  color: #e2e8f0;      /* slate-200 */
+  display: grid;
+  place-items: center;
+}
+
+/* ==== Layout ==== */
+.app { width: min(760px, 92vw); padding: 24px; }
+.app__header { margin-bottom: 16px; }
+h1 { font-size: clamp(1.25rem, 2.2vw + 1rem, 2rem); margin: 0 0 12px; text-align: center; }
+
+.card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.question { margin-top: 0; font-size: 1.125rem; line-height: 1.5; }
+
+/* ==== Options ==== */
+.options { display: grid; gap: 10px; margin: 16px 0; }
+.btn.option-btn { width: 100%; text-align: left; white-space: normal; }
+
+.btn {
+  padding: 12px 14px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.98rem;
+  transition: transform .06s ease, border-color .15s ease, background .15s ease, opacity .15s ease;
+}
+.btn:hover { transform: translateY(-1px); border-color: #475569; }
+.btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+/* Correct / Wrong states */
+.option-btn.correct { background: #052e1d; border-color: #16a34a; }
+.option-btn.wrong   { background: #3b0a0a; border-color: #dc2626; }
+
+/* Primary & Ghost buttons */
+.btn--primary { background: #1d4ed8; border-color: #1d4ed8; }
+.btn--primary:hover { background: #1e40af; border-color: #1e40af; }
+.btn--ghost { background: transparent; border-color: #334155; }
+.btn--ghost:hover { border-color: #64748b; }
+
+.controls { display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px; }
+
+.feedback { min-height: 24px; font-weight: 600; letter-spacing: .2px; }
+.feedback.ok { color: #22c55e; }
+.feedback.err { color: #f87171; }
+
+/* ==== Progress ==== */
+.progress {
+  width: 100%;
+  height: 8px;
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress__fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #22c55e, #60a5fa);
+  transition: width .25s ease;
+}
+.progress__text { text-align: center; font-size: 0.95rem; color: #cbd5e1; margin: 8px 0 0; }
+
+.hidden { display: none !important; }
+.app__footer { text-align: center; color: #94a3b8; margin-top: 14px; font-size: 0.9rem; }
